@@ -1,0 +1,11 @@
+By the maekawa's algorithm, each process need have their own voting set. To access, process need to send request to every vting sets member, 
+it need to get all granted from voting sets member. The quorum of maekawa need to satisify 4 condition:
+
+Each process belongs to its own voting set
+Intersection of any two voting sets is non-empty
+Each voting set is of size K
+Each process belongs to M voting sets
+
+because there is only one process can be granted by all the voting set, so if the multiple processes wish to enter the CS at the same time, 
+they may locked their own voting set member and wait for other voting set to grant them. And it will cause the deadlock, every process lock 
+their voting and wait for others.
